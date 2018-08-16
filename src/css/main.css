@@ -1,0 +1,360 @@
+/*公共样式*/
+html{
+    background: #ff50ac;
+
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+
+
+/*pc端*/
+.desktop{
+    max-width: 1200px;
+    margin:  0 auto;
+}
+.desktop-header{
+    /*清除浮动bfc*/
+    overflow: hidden;
+    height: 86px;
+    width: 100%;
+    line-height: 86px;
+}
+.desktop-header-left{
+    border: 1px solid red;
+    display: flex;
+    height: 100%;
+    /*align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。*/
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.desktop-header-left >.desktop-header-logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+.desktop-header >.desktop-header-right ul li{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+.desktop-header >.desktop-header-right ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.desktop-nav-active{
+    border-top: 4px solid #fff;
+}
+.mobile{
+    display: none;
+}
+
+.desktop-content{
+    /*相当于table*/
+    display: table;
+    width: 850px;
+    border: 1px solid red;
+}
+
+.desktop-content-download,.desktop-content-preview{
+    border: 1px solid red;
+    /*相当于td*/
+    display: table-cell;
+    width: 50%;
+    /*设置元素的垂直对齐方式*/
+    vertical-align: middle;
+}
+.desktop-content-download{
+    padding-top: 110px;
+}
+.desktop-content-download >.slogan-top{
+    border: 1px solid red;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.desktop-content-download >.slogan-top img{
+    border: 1px solid red;
+    height: 87px;
+    width: 222px;
+    margin-bottom: 10px;
+}
+.desktop-content-download >.slogan-top p{
+
+    opacity: 0.5;
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.desktop-content-download >.slogan-bottom{
+    border: 1px solid red;
+    float: left;
+    position: relative;
+}
+/*小竖条*/
+.desktop-content-download >.slogan-bottom:before{
+    position: absolute;
+    content: "";
+    left: 0px;
+    width: 7px;
+    height: 100%;
+    background: #fff;
+    border-radius: 100px;
+}
+
+.desktop-content-download >.slogan-bottom p{
+    margin-left: 22px;
+    color: #ffffff;
+}
+.desktop-content-download >.slogan-bottom p:first-child{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.desktop-content-download >.slogan-bottom p:last-child{
+    font-size: 16px;
+}
+
+.slogan-top,.slogan-bottom{
+    /*!*使其不受 text-align: center;影响*/
+    display: inline-block;
+}
+
+/*两个按钮*/
+.desktop-btns{
+    border: 1px solid red;
+    margin-top: 60px;
+}
+
+/*按钮激活状态*/
+.desktop-btn-active{
+    background-image: linear-gradient(-90deg,#33aeff 1%,#8450ff 100%);
+    color: #fff;
+}
+/*换按钮图片*/
+.desktop-btn-active span:first-child{
+    background:url("../img/demo-appstore-logo-white.png") no-repeat;
+}
+.desktop-btn{
+    width: 170px;
+    height:50px ;
+    line-height: 50px;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 800;
+    margin-top: 20px;
+}
+.desktop-btns .desktop-btn:first-child{
+    margin-right: 30px;
+}
+.desktop-btn-logo{
+    width: 20px;
+    height: 20px;
+        /*background-size：100% 100%;---按容器比例撑满，图片变形； */
+        /*background-size：cover;---把背景图片放大到适合元素容器的尺寸，图片比例不变。*/
+    background-size: 100% 100% !important;
+        /*!important提高优先级*/
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+
+}
+.appstore-logo{
+    background: url("../img/demo-appstore-logo.png") no-repeat;
+}
+.googleplay-logo{
+    background: url("../img/demo-googleplay-logo.png") no-repeat;
+}
+
+
+/*右边的手机*/
+.desktop-content-preview {
+    border: 1px solid blue;
+    text-align: right;
+}
+
+.desktop-content-preview .phone{
+    border: 1px solid #24ff11;
+    width: 270px;
+    height: 486px;
+    display: inline-block;
+    position: relative;
+    background: url("../img/demo-phone.png");
+    /*background-size：cover;---把背景图片放大到适合元素容器的尺寸，图片比例不变。*/
+    background-size: cover;
+    /*属性设置背景图像的起始位置。*/
+    background-position: 0;
+}
+
+/*手机上视频位置*/
+.desktop-content-preview video{
+    position: absolute;
+    left: 35px;
+    top: 47px;
+    width: 202px;
+    height: 360px;
+    background-color: #33ffa4;
+}
+
+.desktop-content-preview .play-btn{
+    background: url("../img/demo-play-btn.png") no-repeat;
+    position: absolute;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    /*左右居中*/
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top: 40%;
+}
+
+
+
+
+/*媒体查询断点，移动端------------------------------*/
+
+@media (max-width: 768px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+
+
+    /*底部导航*/
+    .mobile-nav{
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        opacity: 0.7;
+
+    }
+    .mobile-top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        background: #fff;
+        border: 1px solid red;
+        padding: 16px 24px;
+        box-shadow: inset 0 0 0 0  rgba(226,226,226,0.5);
+        box-sizing: border-box;
+    }
+    .mobile-top-bar .left{
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+    }
+    .mobile-top-bar .left img{
+        height: 84px;
+        width: 84px;
+        margin-right: 20px;
+    }
+
+    .mobile-top-bar .slogan{
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mobile-top-bar .left  .slogan p:first-child{
+        color: #fb4282;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+    .mobile-top-bar .left .slogan p:last-child{
+        color: #cacaca;
+        font-size: 16px;
+
+    }
+    .mobile-top-bar .right .mobile-download-btn{
+        background-image: linear-gradient(45deg ,#ff2e9c 0%, #ff2b51 100%);
+        box-shadow: 0 5px 14px rgba(255,67,132,0.36);
+        border-radius: 170px;
+        color: #fff;
+        font-size: 28px;
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .mobile-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 240px;
+        margin-bottom: 80px;
+    }
+    .mobile-logo .left {
+        margin-top: 20px;
+    }
+    .mobile-logo .left img{
+        width: 160px;
+        height: 160px;
+        margin-right: 20px;
+
+    }
+    .mobile-logo .right{
+        color: #cacaca;
+        font-size: 16px;
+        border: 1px solid red;
+        text-align: center;
+    }
+    .mobile-logo .right img{
+        width: 200px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+   .mobile-slogan{
+        border: 1px solid red;
+        font-size: 48px;
+        color: #fff;
+        font-weight: 800;
+        text-align: center;
+    }
+    .mobile-slogan .slogan-1{
+        font-size: 60px;
+        color: #ffffff;
+        margin-bottom: 24px;
+    }
+    .mobile-slogan .slogan-1 p:first-child{
+        margin-bottom: 10px;
+    }
+    .mobile-slogan .slogan-2{
+        font-size: 28px;
+        color: #fff;
+    }
+    .mobile-download{
+        background: #ffff;
+        box-shadow: 0 5px 19px rgba(0,0,0,0.2);
+        border-radius: 150px;
+        width: 80%;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        color: #fb4282;
+        margin: 40px auto;
+        margin-bottom: 88px;
+        font-size: 42px;
+        font-weight: 800;
+    }
+}
